@@ -1,17 +1,18 @@
 import './App.css'
+import EmailForm from './components/EmailForm'
 
 function App() {
 
 
   return (
     <>
-    <header>
+    <header className='text-white'>
     <h1 className="text-3xl font-bold underline">
       Formulario Para borrar cuenta
     </h1>
     </header>
-    <main>
-
+    <main className='text-white'>
+    <EmailForm/>
     </main>
     </>
   )
