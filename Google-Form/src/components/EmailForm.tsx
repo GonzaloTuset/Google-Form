@@ -14,7 +14,7 @@ const EmailForm: React.FC = () => {
         { email }
       );
 
-      alert('Correo electrónico enviado con éxito');
+      alert('Su cuenta se borrara en breve');
     } catch (error) {
       console.error('Error al enviar el correo electrónico:', error);
       alert('Hubo un error al enviar el correo electrónico');
@@ -23,11 +23,11 @@ const EmailForm: React.FC = () => {
   
 
   return (
-    <div>
-      <h1>Formulario de Contacto</h1>
+    <div className='pl-[100px]'>
+      <h1 className='p-[10px] text-[30px]'>Ingrese su mail</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email:</label>
-        <input className='text-black'
+        <label htmlFor="email">Email: </label>
+        <input className='text-black rounded-sm mx-[10px]'
           type="email"
           id="email"
           name="email"
@@ -37,7 +37,7 @@ const EmailForm: React.FC = () => {
           pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
           title="Por favor, ingresa una dirección de correo electrónico válida."
         />
-        <button type="submit">Enviar Correo</button>
+        <button className='hover:border-red-600 hover:text-red-800 hover:bg-red-500 rounded bg-transparent border-2 border-[rgb(83,100,113)]' type="submit">Borrar Cuenta</button>
       </form>
     </div>
   );
